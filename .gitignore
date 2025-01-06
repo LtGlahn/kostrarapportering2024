@@ -115,4 +115,5 @@ _map.html
 *.gpkg-shm
 *.gpkg-wal
 *.gpkg
+.gpkg-journal
 kostraleveranse2023/debug

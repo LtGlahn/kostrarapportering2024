@@ -6,7 +6,7 @@ Rapportene som finnes her er ferdige, men vi er ikke ferdige med å lage alle sa
 
 Årets KOSTRA-rapport fra Nasjonal vegdatabank (NVDB) bruker samme metodikk som vi har brukt siden 2020, ref [fjorårets leveranse](https://github.com/LtGlahn/kostrarapportering2023).
 
-Tabellen "KOSTRA 01 - Vegnett hele landet" har et par faner med detaljert veglengde per vegkategori for hele landet, samt også per fylke og per kommune. Tabellen "EKSTRARAPPIRT motorveger.xlsx" oppsummerer motorveger og motortrafikkveg.
+Tabellen "KOSTRA 01 - Vegnett hele landet" har et par faner med detaljert veglengde per vegkategori for hele landet, samt også per fylke og per kommune. Tabellen "EKSTRARAPPORT motorveger.xlsx" oppsummerer motorveger og motortrafikkveg.
 
 # Nedlasting 
 
@@ -26,7 +26,7 @@ Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du na
 
 ### Filstruktur
 
-Årets leveranse ligger i undermappen [`kostraleveranse2024`](https://github.com/LtGlahn/kostrarapportering2024/tree/main/kostraleveranse2022). Øvrige mapper inneholder kode og dokumentasjon.
+Årets leveranse ligger i undermappen [`kostraleveranse2024`](https://github.com/LtGlahn/kostrarapportering2024/tree/main/kostraleveranse2024). Øvrige mapper inneholder kode og dokumentasjon.
 
 
 | Navn formell bestilling                                              |  Nummerering | Filnavn                                                    |
