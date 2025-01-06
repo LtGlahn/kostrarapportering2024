@@ -22,8 +22,6 @@ myGdf = nvdbgeotricks.vegnett2gdf( mittfilter=mittfilter )
 myGdf.to_file( 'vegnetthelelandet.gpkg', layer='norge', driver='GPKG')
 # myGdf  = gpd.read_file( 'vegnetthelelandet.gpkg', layer='norge')
 
-lastnedvegnett.rapport01_gdf2excel( myGdf, filnavn='../kostraleveranse2024/Kostra 01 - Vegnett hele landet 2024 fylker.xlsx', metadata=mittfilter)
-
 lastnedvegnett.rapport01_gdf2excel( myGdf, filnavn='../kostraleveranse2024/Kostra 01 - Vegnett hele landet.xlsx', metadata=mittfilter)
 
 tidsbruk = datetime.now() - t0 
