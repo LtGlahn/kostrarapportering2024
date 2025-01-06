@@ -116,4 +116,4 @@ _map.html
 *.gpkg-wal
 *.gpkg
 .gpkg-journal
-kostraleveranse2023/debug
+nvdbapi-clientinfo.json
