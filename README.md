@@ -5,7 +5,13 @@
 
 Tabellen "KOSTRA 01 - Vegnett hele landet" har et par faner med detaljert veglengde per vegkategori for hele landet, samt også per fylke og per kommune. Tabellen "EKSTRARAPPORT motorveger.xlsx" oppsummerer motorveger og motortrafikkveg.
 
-# Nedlasting 
+# Grensejustering Risor og Tvedestrand
+
+Den 1.1.2025 ble grunkretsen _Røysland_ overført fra Risør til Tvedestrand kommune [lovdata vedtak](https://lovdata.no/dokument/LF/forskrift/2023-06-09-837). Systemteknisk så får denne grensejusteringen tilbakevirkende kraft i NVDB, slik at uttaket vårt den 6. januar 2025 følger de nye kommunegrensene selv om vi har spesifisert gyldighetsdato 31.12.2024. Dette påvirker kun den kommunevise inndelingen av `rapportn 01 - Vegnett hele landet.xlsx`.
+
+![Grensejustering Røysland grunnkrets](./bilder/lovdata_grensejustering.png)
+
+# Nedlasting
 
 Årets leveranse publiseres på github på adressen [https://github.com/LtGlahn/kostrarapportering2024](https://github.com/LtGlahn/kostrarapportering2024). På github kan du lettvint laste ned data med den grønne knappen _"Code" -> "Download ZIP"_ , plassert oppe til høyre.
 
@@ -13,29 +19,27 @@ Eller bruk [denne lenken](https://github.com/LtGlahn/kostrarapportering2024/arch
 
 ![Nedlasting, hele arkivet](./bilder/lastnedrepos.png)
 
-Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du navigerer deg fram til riktig rapport, klikker på den og så kan du laste ned: 
-  * Gå til mappen [kostraleveranse2024](https://github.com/LtGlahn/kostrarapportering2024/tree/master/kostraleveranse2024)
-  * Klikk på en fil, for eksempel [Kostra 16 - tunnel u 4m.xlsx](https://github.com/LtGlahn/kostrarapportering2024/blob/master/kostraleveranse2024/Kostra%2016%20-%20tunnell%20u%204m.xlsx)
-  * Klikk på _Download_ - knappen 
+Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du navigerer deg fram til riktig rapport, klikker på den og så kan du laste ned:
+
+* Gå til mappen [kostraleveranse2024](https://github.com/LtGlahn/kostrarapportering2024/tree/master/kostraleveranse2024)
+* Klikk på en fil, for eksempel [Kostra 16 - tunnel u 4m.xlsx](https://github.com/LtGlahn/kostrarapportering2024/blob/master/kostraleveranse2024/Kostra%2016%20-%20tunnell%20u%204m.xlsx)
+* Klikk på _Download_ - knappen
 
 ![Nedlasting, enkelt fil](./bilder/lastnedfil.png)  
-
 
 ### Filstruktur
 
 Årets leveranse ligger i undermappen [`kostraleveranse2024`](https://github.com/LtGlahn/kostrarapportering2024/tree/main/kostraleveranse2024). Øvrige mapper inneholder kode og dokumentasjon.
 
-
 | Navn formell bestilling                                              |  Nummerering | Filnavn                                                    |
 |--------------------------------------------------------------------------------|----|------------------------------------------------------------|
 | Riks-, fylkes-, kommune-, privat- og skogsbilveg                               |  1 | Kostra 01 - Vegnett hele landet.xlsx                       |
-|                                                                                |    | Kostra 01 - Vegnett hele landet 2024 fylker.xlsx           |
 |                                                                                |  2 | Kostra 02 - Fylkesveg med motorveg og motortrafikkveg.xlsx |
 | Fylkesveg uten fast dekke                                                      |  3 | Kostra 03 - Fylkesveg uten fast dekke.XLSX                 |
 | Fylkesveg med 4 felt                                                           |  4 | Kostra 04 - Fylkesveg med 4 felt.XLSX                      |
 | Fylkesvei med tillatt aksellast <10 tonn                                       |  5 | Kostra 05 - Fylkesveg aksellast u 10t.xlsx                 |
 | Fylkesvei med begrensning på totalvekt <50 tonn                                |  6 | Kostra 06 - Fylkesveg totalvekt u 50t.xlsx                 |
-| Fylkesveg med fartsgrense 50 eller lavere                                      |  7 | Kostra 07 - Fylkesveg maks 50kmt.xlsx                      | 
+| Fylkesveg med fartsgrense 50 eller lavere                                      |  7 | Kostra 07 - Fylkesveg maks 50kmt.xlsx                      |
 | Fylkesvei med begrensning på kj.t.lengde <19,5m                                |  8 | Kostra 08 - maks lengde u 19m.xlsx                         |
 | Underganger på fylkesveg med høydebegrensning lavere enn 4 m                   |  9 | Kostra 09 - Undergang lavere enn 4m.xlsx                   |
 | Fylkesveg med dårlig eller svært dårlig dekketilstand                          | 10 |  - _(leveres fra eget fagsystem dekkeforvaltning)_         |
@@ -57,27 +61,27 @@ Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du na
 | Kollektivfelt langs fylkesveg                                                  | 25 | Kostra 25 - Fylkesveg med kollektivfelt.xlsx               |
 | Ekstrarapport motorveger (alle veger, ikke bare fylkesveg)                     |    | EKSTRARAPPORT motorveger.xlsx                              |
 
-# Merknader til de enkelte rapportene 
+# Merknader til de enkelte rapportene
 
 Konnekteringslenker knytter sammen en sideveg og en hovedveg i et kryss, og utgjør typisk 5-15 meter mellom det punktet der sideveg møter hovedvegenes vegkant og senterlinja på hovedveg. Disse 5-15 metrene skal ikke regnes med når vi teller veglenger. De utgjør i snitt mindre enn 0.05% av vegnettet, men de er ujevnt fordelt. Konnekteringslenker inngår ikke når vi teller lengder av vegnett, men noen av lengdene nedenfor er opptelling av såkalte _fagdata_, dvs NVDB objekttyper som er _"limt oppå"_ vegnettet i NVDB. For disse klarer vi p.t. ikke skille ut konnekterinngslenkene når vi jobber med fagdata.
 
 ### Kostra 01 - Vegnett hele landet
 
-Rapport nummer 1, _"Vegnett hele landet"_, teller lengden av kjørbart vegnet i Norge. Merk at lengdene her oppgis i kilometer, til forskjell fra øvrige rapporter, som har meter som lengdeenhet. 
+Rapport nummer 1, _"Vegnett hele landet"_, teller lengden av kjørbart vegnet i Norge. Merk at lengdene her oppgis i kilometer, til forskjell fra øvrige rapporter, som har meter som lengdeenhet.
 
-Her teller vi ikke gang- og sykkelveger, kun trafikantgruppe K (kjørende). Av typeVeg så teller vi med verdiene _kanalisertVeg, enkelBilveg, rampe, rundkjøring_ og _gatetun_ Vi teller ikke med sideanlegg, strekninger med _adskilte løp=Mot_ og konnekteringslenker. Derimot teller vi alle kryssdeler. 
+Her teller vi ikke gang- og sykkelveger, kun trafikantgruppe K (kjørende). Av typeVeg så teller vi med verdiene _kanalisertVeg, enkelBilveg, rampe, rundkjøring_ og _gatetun_ Vi teller ikke med sideanlegg, strekninger med _adskilte løp=Mot_ og konnekteringslenker. Derimot teller vi alle kryssdeler.
 
 ### Kostra 02 - Fylkesveg med motorveg og motortrafikkveg
 
-Her teller vi lengden av objektet _Motorveg (595)_ langs fylkesvegnettet. Det er såpass få (4 strekninger) at vi ramser dem opp per fylke og vegnummer. Vi teller med eventuelle kryssdeler, men ikke med sideanlegg eller strekninger med _adskilte løp=Mot_. 
+Her teller vi lengden av objektet _Motorveg (595)_ langs fylkesvegnettet. Det er såpass få (4 strekninger) at vi ramser dem opp per fylke og vegnummer. Vi teller med eventuelle kryssdeler, men ikke med sideanlegg eller strekninger med _adskilte løp=Mot_.
 
 ### Kostra 03 - Fylkesveg uten fast dekke
 
-Her finner vi lengden av objekttypen _Vegdekke (241)_ langs fylkesveg med egenskapfilteret _massetype = Grus_, og skiller tall for vanlig bilveg (trafikantgruppe K) fra tall for gående og syklende (trafikantgruppe G) i egne faner. Vi teller ikke med sideanlegg og _adskilte løp = Mot_. 
+Her finner vi lengden av objekttypen _Vegdekke (241)_ langs fylkesveg med egenskapfilteret _massetype = Grus_, og skiller tall for vanlig bilveg (trafikantgruppe K) fra tall for gående og syklende (trafikantgruppe G) i egne faner. Vi teller ikke med sideanlegg og _adskilte løp = Mot_.
 
 ### Kostra 04 - Fylkesveg med 4 felt
 
-Her teller vi lengden av vegnett som har fire eller flere felt. Vi regner ikke med kjørefelt av typene sykkelfelt, fergeoppstillingsplass og ekstra felt ved bomstasjoner. Vi teller heller ikke med kryssdeler, sideanlegg og konnekteringslenker, og heller ikke _adskilte løp = Mot_. 
+Her teller vi lengden av vegnett som har fire eller flere felt. Vi regner ikke med kjørefelt av typene sykkelfelt, fergeoppstillingsplass og ekstra felt ved bomstasjoner. Vi teller heller ikke med kryssdeler, sideanlegg og konnekteringslenker, og heller ikke _adskilte løp = Mot_.
 
 Denne rapporten er laget med applikasjonen ["NVDB rapporter for KOSTRA"](https://nvdb-kostra.atlas.vegvesen.no/ ) med [disse valgene](https://raw.githubusercontent.com/LtGlahn/kostrarapportering2021/master/bilder/lastned04-firefeltsfylkesveg.png)
 
@@ -89,7 +93,7 @@ Her finner vi lengden av objekttypen _Bruksklasse, normaltransport (904)_ med de
 
 Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg med de egenskapverdiene som tilsier maks totalvekt under 50 tonn, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_.
 
-### Kostra 07 Fylkesveg med fartsgrense under 50 km/t.
+### Kostra 07 Fylkesveg med fartsgrense under 50 km/t
 
 Her finner vi lengden av _Fartsgrense (105)_ langs fylkesveg med de egenskapverdiene som tilsier fartgrense 50 kilometer i timen eller lavere, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_.
 
@@ -97,7 +101,7 @@ Her finner vi lengden av _Fartsgrense (105)_ langs fylkesveg med de egenskapverd
 
 Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg med de egenskapverdiene som tilsier maks kjøretøylengde kortere enn 19.5 meter, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_.
 
-### Kostra 09 Undergang med høyde lavere enn 4 meter.
+### Kostra 09 Undergang med høyde lavere enn 4 meter
 
 Her teller vi antall av _Høydebegrensning (591)_ med egenskapsfilteret _Type Hinder = Undergang/bru_ og _Skilta høyde < 4_ langs fylkesveg.
 
@@ -105,19 +109,19 @@ Her teller vi antall av _Høydebegrensning (591)_ med egenskapsfilteret _Type Hi
 
 _Disse dataene finnes ikke i nasjonal vegdatbank, men i eget system for forvaltning av vegdekke. Vi forstår at dette er en separat leveranse; denne leveransen har kun data fra NVDB._
 
-### Kostra 11 Fylkesveg uten fast dekke med ÅDT høyere enn 5000 kjøretøy per døgn 
+### Kostra 11 Fylkesveg uten fast dekke med ÅDT høyere enn 5000 kjøretøy per døgn
 
-Vi har ingen forekomster med fylkesveger uten fast dekke (dvs objekttypen _Vegdekke (241)_ med egenskapfilteret _Massetype = Grus_) som overlapper med objekttypen  _Trafikkmende (540)_ med egenskapen  _ÅDT, total_ større enn 5000 kjøretøy per døgn. (I NVDB vil du sagtens finne et par hundre meter med den metoden vi har brukt, men det er datafeil). 
+Vi har ingen forekomster med fylkesveger uten fast dekke (dvs objekttypen _Vegdekke (241)_ med egenskapfilteret _Massetype = Grus_) som overlapper med objekttypen  _Trafikkmende (540)_ med egenskapen  _ÅDT, total_ større enn 5000 kjøretøy per døgn. (I NVDB vil du sagtens finne et par hundre meter med den metoden vi har brukt, men det er datafeil).
 
 ### Kostra 12
 
-Her teller vi objekttypen _Trafikkmengde (540)_ med egenskapverdien _ÅDT, total_ større enn 5000 kjøretøy per døgn langs fylkesveger. 
+Her teller vi objekttypen _Trafikkmengde (540)_ med egenskapverdien _ÅDT, total_ større enn 5000 kjøretøy per døgn langs fylkesveger.
 
 ### Kostra 13 og 14 Tunneller på fylkesveg, antall og lengde
 
-Her teller vi antall og samlet lengde for tunneler på fylkesveg. Analysen er en sammenstilling av objekttypene _Tunnelløp (67)_ og _Tunnel (581)_. Hvis _tunnel_ - objektet har egenskapen _Lengde, offisiell_ så bruker vi denne for å regne ut lengdene. Hvis ikke henter vi lengden fra tunnelløpet, enten fra tunnelløpets egenskap _Lengde_ eller fra tunnelløpets utstrekning langs vegnettet. 
+Her teller vi antall og samlet lengde for tunneler på fylkesveg. Analysen er en sammenstilling av objekttypene _Tunnelløp (67)_ og _Tunnel (581)_. Hvis _tunnel_ - objektet har egenskapen _Lengde, offisiell_ så bruker vi denne for å regne ut lengdene. Hvis ikke henter vi lengden fra tunnelløpet, enten fra tunnelløpets egenskap _Lengde_ eller fra tunnelløpets utstrekning langs vegnettet.
 
-### Kostra 15 Tunneller lengre enn 500 meter på fylkesveg 
+### Kostra 15 Tunneller lengre enn 500 meter på fylkesveg
 
 Samme metodikk som for kostra 13 og 14, men nå teller vi kun antall og lengde for de tunnellene som er lengre enn 500 meter.
 
@@ -127,7 +131,7 @@ Her finner vi objekttypene _Tunnel (581)_ og _Tunnelløp (67)_ som overlapper me
 
 ### Kostra 17 Bruer langs fylkesveg
 
-Her finner vi antall og lengde av objekttypen _Bru (60)_ som har egenskap _Brukategori = Vegbru_ eller  _Bru i fylling_. 
+Her finner vi antall og lengde av objekttypen _Bru (60)_ som har egenskap _Brukategori = Vegbru_ eller  _Bru i fylling_.
 
 ### Kostra 18 - Bruer under 10t langs fylkesveg
 
@@ -173,7 +177,7 @@ Dette er telling av objekttypene _Skjerm (3)_ med  egenskapen _Bruksområde = St
 
 Her teller vi lengde av vegnettet for kjørende, slik som i rapporten Kostra 01 vegnett, men i denne rapporten teller vi vi kun med de strekningene der det finnes kollektivfelt.  
 
-Vi ser at de eldre versjonene av Rapport nummer 25, _"Fylkesveg med kollektivfelt"_, så er det telt to ganger veglengden der kollektivfelt finnes på begge sider av vegen. Vi er usikre på hva som foretrekkes, og oppgir derfor begge deler, henholdsvis  _"Lengde en retning (m)"_ hvor vi kun teller hvorvidt det finnes kollektivfelt på strekningen, likegyldig hvor mange, og kolonnen _"Lengde per kollektivfelt (m)"_, hvor vi teller dobbelt opp hvis det finnes kollektivfelt på begge sider av vegen (dvs for begge retninger). 
+Vi ser at de eldre versjonene av Rapport nummer 25, _"Fylkesveg med kollektivfelt"_, så er det telt to ganger veglengden der kollektivfelt finnes på begge sider av vegen. Vi er usikre på hva som foretrekkes, og oppgir derfor begge deler, henholdsvis  _"Lengde en retning (m)"_ hvor vi kun teller hvorvidt det finnes kollektivfelt på strekningen, likegyldig hvor mange, og kolonnen _"Lengde per kollektivfelt (m)"_, hvor vi teller dobbelt opp hvis det finnes kollektivfelt på begge sider av vegen (dvs for begge retninger).
 
 ### Ekstrarapport motorveger
 
