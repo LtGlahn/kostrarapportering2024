@@ -7,7 +7,7 @@ Tabellen "KOSTRA 01 - Vegnett hele landet" har et par faner med detaljert veglen
 
 # Grensejustering Risor og Tvedestrand
 
-Den 1.1.2025 ble grunkretsen _Røysland_ overført fra Risør til Tvedestrand kommune [lovdata vedtak](https://lovdata.no/dokument/LF/forskrift/2023-06-09-837). Systemteknisk så får denne grensejusteringen tilbakevirkende kraft i NVDB, slik at uttaket vårt den 6. januar 2025 følger de nye kommunegrensene selv om vi har spesifisert gyldighetsdato 31.12.2024. Dette påvirker kun den kommunevise inndelingen av `rapportn 01 - Vegnett hele landet.xlsx`.
+Den 1.1.2025 ble grunkretsen _Røysland_ overført fra Risør til Tvedestrand kommune [lovdata vedtak](https://lovdata.no/dokument/LF/forskrift/2023-06-09-837). Systemteknisk så får denne grensejusteringen tilbakevirkende kraft i NVDB, slik at uttaket vårt den 6. januar 2025 følger de nye kommunegrensene selv om vi har spesifisert gyldighetsdato 31.12.2024. Dette påvirker kun den kommunevise inndelingen av `rapportn 01 - Vegnett hele landet.xlsx`. For dem som etterspør vegnett per 1.1.2025 har vi laget ekstrarapporten `Kostra 01 - 2025 kommuneinndeling Vegnett hele landet.xlsx`. Cirka 15 km med veg byttet kommune. 
 
 ![Grensejustering Røysland grunnkrets](./bilder/lovdata_grensejustering.png)
 
@@ -34,6 +34,7 @@ Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du na
 | Navn formell bestilling                                              |  Nummerering | Filnavn                                                    |
 |--------------------------------------------------------------------------------|----|------------------------------------------------------------|
 | Riks-, fylkes-, kommune-, privat- og skogsbilveg                               |  1 | Kostra 01 - Vegnett hele landet.xlsx                       |
+| 2025-kommuneindeling Riks-, fylkes-, kommune-, privat- og skogsbilveg          |  1 | Kostra 01 - 2025 kommuneinndeling Vegnett hele landet.xlsx |
 |                                                                                |  2 | Kostra 02 - Fylkesveg med motorveg og motortrafikkveg.xlsx |
 | Fylkesveg uten fast dekke                                                      |  3 | Kostra 03 - Fylkesveg uten fast dekke.XLSX                 |
 | Fylkesveg med 4 felt                                                           |  4 | Kostra 04 - Fylkesveg med 4 felt.XLSX                      |
