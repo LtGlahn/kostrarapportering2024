@@ -7,9 +7,22 @@ Tabellen "KOSTRA 01 - Vegnett hele landet" har et par faner med detaljert veglen
 
 # Grensejustering Risor og Tvedestrand
 
-Den 1.1.2025 ble grunkretsen _Røysland_ overført fra Risør til Tvedestrand kommune [lovdata vedtak](https://lovdata.no/dokument/LF/forskrift/2023-06-09-837). Systemteknisk så får denne grensejusteringen tilbakevirkende kraft i NVDB, slik at uttaket vårt den 6. januar 2025 følger de nye kommunegrensene selv om vi har spesifisert gyldighetsdato 31.12.2024. Dette påvirker kun den kommunevise inndelingen av `rapportn 01 - Vegnett hele landet.xlsx`. For dem som etterspør vegnett per 1.1.2025 har vi laget ekstrarapporten `Kostra 01 - 2025 kommuneinndeling Vegnett hele landet.xlsx`. Cirka 15 km med veg byttet kommune. 
+Den 1.1.2025 ble grunkretsen _Røysland_ overført fra Risør til Tvedestrand kommune [lovdata vedtak](https://lovdata.no/dokument/LF/forskrift/2023-06-09-837). Systemteknisk så får denne grensejusteringen tilbakevirkende kraft i NVDB, slik at uttaket vårt den 6. januar 2025 følger de nye kommunegrensene selv om vi har spesifisert gyldighetsdato 31.12.2024. Dette påvirker kun den kommunevise inndelingen av `rapportn 01 - Vegnett hele landet.xlsx`. For dem som etterspør vegnett per 1.1.2025 har vi laget ekstrarapporten `Kostra 01 - 2025 kommuneinndeling Vegnett hele landet.xlsx`. Cirka 15 km med veg byttet kommune fra Risør til Tvedestrand.
 
 ![Grensejustering Røysland grunnkrets](./bilder/lovdata_grensejustering.png)
+
+For å finne de vegsegmentene som nå tilhører Tvedestrand, men før nyttår tilhørte Risør har vi brukt to teknikker:
+
+* Vegsegmenter helt klart innafor flaten vist nedenfor har fått kommunenummer maskinelt med scriptet `kode/fikseKommunegrenser.py`
+* Vegsegmenter som krysser grenselinja er vurdert manuelt, og her har vi sett på gamle data for den historiske objekttypen [532 vegreferanse vegkart-søk](https://vegkart.atlas.vegvesen.no/#kartlag:geodata/@155167,6524566,11/hva:hva%5B0%5D%5BabsoluteIntervals%5D=false&hva%5B0%5D%5Bfilter%5D%5B0%5D%5Boperator%5D=%3D&hva%5B0%5D%5Bfilter%5D%5B0%5D%5Btype_id%5D=4592&hva%5B0%5D%5Bfilter%5D%5B0%5D%5Bverdi%5D%5B0%5D=1&hva%5B0%5D%5Bid%5D=532/hvor:kommune%5B0%5D=4213/n%C3%A5r:2022-09-13) for å verifisere om disse segmentene tilhørte Risør (kommuenummer 01) eller Tvedestrand. Dette gjelder en håndfull kommunal- og privatveger.
+
+Figuren under viser historiske data for 532 vegreferanse med kommunenummer 1 innafor nye Tvedestrand kommune. Dette er de kommunal, privat og skogsbilvegene der vi må "tilbakeføre" kommunenummeret til 4201 for å få riktig statistikk. I tillegg kommer ca 5 km med E18 og Fv3442, men disse to vegene er presist delt på de gamle kommunegrensene. Men for 4213 PV5390 og 4213 PV99511 var det nødvendig å konsultere gamle vegreferanseverdier for å sikre at segmentene ble koblet mot rett kommune.  
+
+![Vegkart-søk etter gamle vegsystemreferanser med kommunenummer 1 innafor nye Tvedestrand kommune](./bilder/vegkart_gamleRisørveger.png)
+
+Figuren under viser litt av 4213 PV5390, og hvordan tilordningen mellom gamle Risør (4201) og Tvedestrand (4213) ikke alltid er selvforklariende. Det rosa området tilhørte Risør kommune før nyttår 2024-12-31. Nåværende 4213 PV5390 bytter kommunetilhørighet flere ganger langs vegens utstrekning.
+
+![Detalj fra 4213 PV5390, som viser hvordan vegen krysser den gamle kommunegrensa flere steder](./bilder/eksempel_manuell_vurdering.png)
 
 # Nedlasting
 
